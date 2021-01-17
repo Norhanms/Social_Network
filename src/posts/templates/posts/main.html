@@ -1,8 +1,25 @@
 {% extends 'base.html'%}
-{% block title%} home{%endblock title%}
+{% block title%} home {%endblock title%}
 
 {% block content%}
-<h1>posts</h1>
-<h2>{{msg}}</h2>
+<div id="test">
+    <h1>posts</h1>
+    <p>{{msg}}</p>
+</div>
+<div class="posts">
+    {% for obj in qs %}
+    <p>{{obj.body}}</p>
+    {%endfor%}
+</div>
+
+
+<div id="posts2">
+
+</div>
+<div id="spinner-box">
+    <div class="spinner-border" role="status">
+        <span class="sr-only">Loading...</span>
+    </div>
+</div>
 
 {%endblock content%}

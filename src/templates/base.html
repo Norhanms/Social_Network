@@ -1,4 +1,5 @@
 {% load static %}
+
 <!doctype html>
 <html lang="en">
 
@@ -21,8 +22,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropper/4.1.0/cropper.min.css">
 
     <!-- custom css & js-->
-    <link rel="stylesheet" href={% static 'style.css' %}>
-    <script src={% static 'main.js' %} defer></script>
+    <link rel="stylesheet" href="{% static 'style.css' %}" type="text/css">
+    <script src="{% static 'main.js' %}" defer></script>
 
     <title>Social Network 2.0|{%block title%}
         {% endblock title%}
@@ -31,6 +32,7 @@
 
 <body>
     <div class="container mt-3">
+        <h1 class="red">base</h1>
         {% block content %}
         {% endblock content %}
     </div>
